@@ -98,5 +98,5 @@ function avsCardHtml(){
   <div class="avs-panel"><label class="avs-sw"><input type="checkbox" id="avsOn"${c.on?' checked':''}> Avisar quando o horário do paciente estiver chegando</label>
   <div class="avs-line"><label for="avsMin">Antecedência</label><select id="avsMin">${[5,10,15,20,30,60].map(m=>`<option value="${m}"${c.min===m?' selected':''}>${m} min</option>`).join('')}</select></div>
   <p class="avs-st ${st[0]}">${esc(st[1])}</p>
-  <div class="avs-btns">${can?'<button class="sm" data-act="avsperm">Ativar notificações</button>':''}<button class="ghost sm" data-act="avstest">Testar alarme</button></div></div></details>`;
+  <div class="avs-btns">${can?'<button class="sm" data-act="avsperm">Ativar notificações</button>':''}<button class="sm" data-act="pushactivate">Ativar Push (iPhone/Windows)</button><button class="ghost sm" data-act="avstest">Testar alarme</button></div></div></details>`;
 }
